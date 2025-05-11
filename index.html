@@ -1,182 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAT Cargo VAD LLC</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #333;
-        }
-        nav {
-            background: #000;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .hero {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            padding: 80px 20px;
-            background: #111;
-            color: #fff;
-            min-height: 100vh;
-            animation: fadeIn 2s ease-in-out;
-        }
-        .hero-text {
-            max-width: 500px;
-            padding: 20px;
-            animation: slideInLeft 1.5s ease;
-        }
-        .hero-text h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        .hero-text p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .hero-img img {
-            max-width: 400px;
-            width: 100%;
-            border-radius: 10px;
-            animation: slideInRight 1.5s ease;
-        }
-        .section {
-            padding: 60px 20px;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 1s ease;
-        }
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .section h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-        .section p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #555;
-        }
-        .contact {
-            background: #e9e9e9;
-            padding: 60px 20px;
-        }
-        footer {
-            background: #000;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideInLeft {
-            from { transform: translateX(-50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slideInRight {
-            from { transform: translateX(50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Double S Leather Inc.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; background-color: #fdfdfd; color: #1a1a1a; }
+    header { background-color: #111; color: #fff; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; }
+    header h1 { font-size: 26px; font-weight: 700; }
+    nav a { color: #fff; margin-left: 25px; text-decoration: none; font-weight: 600; }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1600185365483-d6e14ec7f591?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 42px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px 30px;
+      border-radius: 10px;
+    }
+    section { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+    .section-title { font-size: 28px; text-align: center; margin-bottom: 40px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+    .card {
+      background-color: #fff;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .card h4 { margin-bottom: 10px; font-size: 18px; }
+    .card p { color: #555; line-height: 1.6; }
+    .contact-info p {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    footer { background-color: #111; color: #aaa; text-align: center; padding: 30px 10px; margin-top: 60px; }
+    a { color: #c0392b; }
+  </style>
 </head>
 <body>
-
+  <header>
+    <h1>Double S Leather Inc.</h1>
     <nav>
-        <div class="logo">PAT Cargo VAD LLC</div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    <div class="hero" id="home">
-        <div class="hero-text">
-            <h1>PAT Cargo VAD LLC</h1>
-            <p>Your trusted partner in transportation and warehousing. We provide reliable cargo services and storage solutions to meet your business needs with efficiency and care.</p>
-        </div>
-        <div class="hero-img">
-            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=934&q=80" alt="Cargo Services">
-        </div>
+  <section class="hero">
+    <h2>Timeless Leather. Crafted to Last.</h2>
+  </section>
+
+  <section id="about">
+    <h3 class="section-title">Our Mission</h3>
+    <div class="card">
+      <p>Double S Leather Inc. specializes in crafting premium consumer leather goods with traditional values and modern craftsmanship. Proudly based in Charlotte, North Carolina, we design for durability, quality, and enduring style.</p>
     </div>
+  </section>
 
-    <div class="section" id="about">
-        <h2>About Us</h2>
-        <p>PAT Cargo VAD LLC is a Domestic LLC based in Arizona, offering specialized services in transportation and warehousing. With a focus on reliability and customer satisfaction, we have been serving businesses since 2021.</p>
-        <p><strong>Registered Address:</strong><br>
-        2902 W Sweetwater Ave, Apt 2190, Phoenix, AZ 85029, United States</p>
+  <section id="products">
+    <h3 class="section-title">Our Products</h3>
+    <div class="grid">
+      <div class="card">
+        <h4>👜 Leather Bags</h4>
+        <p>Elegant handcrafted leather bags for professionals and travelers alike.</p>
+      </div>
+      <div class="card">
+        <h4>👞 Footwear</h4>
+        <p>Durable and stylish shoes made with the finest leather and stitched to perfection.</p>
+      </div>
+      <div class="card">
+        <h4>🎁 Custom Orders</h4>
+        <p>Get personalized leather products tailored to your needs and preferences.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="section contact" id="contact">
-        <h2>Contact Us</h2>
-        <p><strong>Email:</strong> <a href="mailto:contact@patcargovadllc.click">contact@patcargovadllc.click</a></p>
-        <p><strong>Agent Address:</strong><br>
-        2902 W Sweetwater Ave, Apt 2190, Phoenix, AZ 85029, United States</p>
+  <section id="contact">
+    <h3 class="section-title">Contact Us</h3>
+    <div class="card contact-info">
+      <p><strong>Email:</strong> <a href="mailto:careers@doubleleainc.shop">careers@doubleleainc.shop</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+18723711580">(872) 371-1580</a></p>
+      <p><strong>Location:</strong> Charlotte, North Carolina</p>
     </div>
+  </section>
 
-    <footer>
-        &copy; 2025 PAT Cargo VAD LLC. All rights reserved.
-    </footer>
-
-    <script>
-        // Intersection Observer for fade-in effect
-        const sections = document.querySelectorAll('.section');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
-
+  <footer>
+    <p>&copy; 2025 Double S Leather Inc. All rights reserved.</p>
+  </footer>
 </body>
 </html>
